@@ -49,6 +49,7 @@ class MainViewController: UIViewController {
         view.window!.layer.add(transition, forKey: kCATransition)
         present(obj, animated: false, completion: nil)
     }
+    
     // MARK: - 카테고리 추가 버튼 구현
     @IBAction func btnAddCategory(_ sender: UIButton) {
         let alert = UIAlertController(title: "알림", message: "추가할 카테고리의 제목을 입력하세요", preferredStyle: .alert)
