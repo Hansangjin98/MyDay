@@ -10,5 +10,5 @@ import UIKit
 
 struct CategoryList
 {
-    let categoryName: String
+    let categoryTitle: String
 }

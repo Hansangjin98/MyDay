@@ -14,27 +14,19 @@ class MainViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     var databaseRef = Database.database().reference()
     var categoryList = [CategoryList]()
+    var list: [String] = []
+    let db = Firestore.firestore()
+    var dbref: DocumentReference?
     
     // MARK: - viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
-        categoryTextSet()
-        backBarButtonStyle()
-        makeCategory()
-        
         collectionView.delegate = self
         collectionView.dataSource = self
-        // Do any additional setup after loading the view, typically from a nib.
-        let screenSize = UIScreen.main.bounds
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
-        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 20)
-        layout.itemSize = CGSize(width: screenWidth/3, height: screenHeight/5)
-        layout.minimumInteritemSpacing = 0
-        layout.minimumLineSpacing = 0
-        collectionView.collectionViewLayout = layout
-        
+        categoryTextSet()
+        backBarButtonStyle()
+        screenSet()
+        initCategory()
     }
     
     // MARK: - 프로필 이동 버튼 구현
@@ -55,8 +47,10 @@ class MainViewController: UIViewController {
         let alert = UIAlertController(title: "알림", message: "추가할 카테고리의 제목을 입력하세요", preferredStyle: .alert)
         let ok = UIAlertAction(title: "추가", style: .default, handler: { _ in
             if let text = alert.textFields?[0].text {
-                let item: CategoryList = CategoryList(categoryName: text)
+                let item: CategoryList = CategoryList(categoryTitle: text)
+                self.list.append(text)
                 self.categoryList.append(item)
+                self.updateCollectionDatabase()
                 self.collectionView.reloadData()
             }
         })
@@ -89,15 +83,47 @@ class MainViewController: UIViewController {
     }
     
     // MARK: - 컬렉션 뷰 셀 세팅
-    func makeCategory() {
-        let item: CategoryList = CategoryList(categoryName: "일기")
+    func initCategory() {
+        let item: CategoryList = CategoryList(categoryTitle: "일기")
         categoryList.append(item)
         
-        let item2: CategoryList = CategoryList(categoryName: "영화")
+        let item2: CategoryList = CategoryList(categoryTitle: "영화")
         categoryList.append(item2)
         
-        let item3: CategoryList = CategoryList(categoryName: "음악")
+        let item3: CategoryList = CategoryList(categoryTitle: "음악")
         categoryList.append(item3)
+
+        makeCollectionDatabase()
+    }
+    
+    // MARK: - 컬렉션 뷰 데이터베이스
+    
+    func makeCollectionDatabase() {
+        for i in stride(from: 0, to: categoryList.count, by: +1) {
+            list.append(categoryList[i].categoryTitle)
+        }
+        if let userID = Auth.auth().currentUser?.uid {
+            dbref = db.collection("\(userID)").document("CategoryList")
+            dbref?.setData(["Category" : list])
+        }
+    }
+    
+    // MARK: - 컬렉션 뷰 데이터베이스 업데이트
+    func updateCollectionDatabase() {
+        dbref?.updateData(["Category" : list])
+    }
+    
+    // MARK: - 스크린 세팅
+    func screenSet() {
+        let screenSize = UIScreen.main.bounds
+        let screenWidth = screenSize.width
+        let screenHeight = screenSize.height
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 20)
+        layout.itemSize = CGSize(width: screenWidth/3, height: screenHeight/5)
+        layout.minimumInteritemSpacing = 0
+        layout.minimumLineSpacing = 0
+        collectionView.collectionViewLayout = layout
     }
 }
 
@@ -111,7 +137,7 @@ extension MainViewController: UICollectionViewDataSource, UICollectionViewDelega
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! MyCollectionViewCell
-        cell.categoryBtn.setTitle("\(categoryList[indexPath.row].categoryName)", for: .normal)
+        cell.categoryBtn.setTitle("\(categoryList[indexPath.row].categoryTitle)", for: .normal)
         cell.frame.size = CGSize(width: UIScreen.main.bounds.width/3, height: UIScreen.main.bounds.height/5)
         return cell
     }
