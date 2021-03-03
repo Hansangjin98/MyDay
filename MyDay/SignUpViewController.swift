@@ -45,6 +45,7 @@ class SignUpViewController: UIViewController {
     
     // MARK: - 회원가입 버튼 구현
     @IBAction func btnSignUp(_ sender: UIButton) {
+        databaseRef = Database.database().reference()
         if (password.text == passwordCheck.text) {
             Auth.auth().createUser(withEmail: email.text!, password: password.text!, completion: { [self] (user, error) in
                 let uid = user?.user.uid

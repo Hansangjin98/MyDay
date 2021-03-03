@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TGw-SK-4qu">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="TGw-SK-4qu">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -193,7 +193,7 @@
                                             <constraint firstAttribute="height" constant="60" id="99B-rb-4LW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                 <color key="value" systemColor="systemOrangeColor"/>
@@ -209,7 +209,7 @@
                                             <constraint firstAttribute="height" constant="60" id="jB9-ZL-NrV"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="color" keyPath="borderInactiveColor">
                                                 <color key="value" systemColor="systemOrangeColor"/>
@@ -673,13 +673,13 @@
     </scenes>
     <designables>
         <designable name="DxC-AR-84O">
-            <size key="intrinsicContentSize" width="123" height="30.5"/>
+            <size key="intrinsicContentSize" width="123" height="29"/>
         </designable>
         <designable name="EXh-ql-MzD">
             <size key="intrinsicContentSize" width="70" height="30.5"/>
         </designable>
         <designable name="JtZ-sW-5M8">
-            <size key="intrinsicContentSize" width="83.5" height="30.5"/>
+            <size key="intrinsicContentSize" width="83.5" height="29"/>
         </designable>
         <designable name="SHh-qy-uUS">
             <size key="intrinsicContentSize" width="70" height="30.5"/>
