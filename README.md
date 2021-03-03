@@ -14,7 +14,7 @@
 ![icon](https://user-images.githubusercontent.com/70688424/109838609-a8d7a280-7c89-11eb-957b-f43fa3aae75f.jpg)   
 색상은 2021년 팬톤 올해의 색상인 노란색과 회색의 계열로 구성했다.   
 ### 오토레이아웃&키보드노티피케이션
-<img width="640" alt="layout" src="https://user-images.githubusercontent.com/70688424/109848929-26081500-7c94-11eb-8de9-eaefe4820fc1.png"><br>
+<img width="640" alt="layout" src="https://user-images.githubusercontent.com/70688424/109853066-d5df8180-7c98-11eb-8979-3640139731f4.gif"><br>
 처음 해봐서 너무 애를 먹었다.
 ### CRUD 및 기본 DB 기능 시연
 이미지 클릭시 링크 이동   
@@ -25,4 +25,3 @@
       alt="Everything Is AWESOME">
       </a>
     </div><br>
- 
