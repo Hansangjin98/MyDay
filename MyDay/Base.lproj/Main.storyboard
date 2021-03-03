@@ -461,29 +461,26 @@
                                 </subviews>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="frf-OD-Zxc">
-                                <rect key="frame" x="32" y="92" width="350" height="350"/>
+                                <rect key="frame" x="57" y="93" width="300" height="300"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="qoB-gA-mCN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="8cP-cd-tks" firstAttribute="top" secondItem="4KF-dJ-8Tk" secondAttribute="bottom" constant="55" id="2kz-9n-zKC"/>
-                            <constraint firstItem="8cP-cd-tks" firstAttribute="leading" secondItem="qoB-gA-mCN" secondAttribute="leading" constant="57" id="6jK-jA-Fzs"/>
-                            <constraint firstItem="wSG-im-c9j" firstAttribute="leading" secondItem="qoB-gA-mCN" secondAttribute="leading" constant="20" id="DAw-d3-vI3"/>
-                            <constraint firstItem="qoB-gA-mCN" firstAttribute="trailing" secondItem="8cP-cd-tks" secondAttribute="trailing" constant="57" id="G6k-zm-jlm"/>
-                            <constraint firstItem="wSG-im-c9j" firstAttribute="top" secondItem="qoB-gA-mCN" secondAttribute="top" constant="20" id="QnG-Rr-Kah"/>
-                            <constraint firstItem="4KF-dJ-8Tk" firstAttribute="top" secondItem="frf-OD-Zxc" secondAttribute="bottom" constant="91" id="V2T-zu-75U"/>
-                            <constraint firstItem="frf-OD-Zxc" firstAttribute="top" secondItem="qoB-gA-mCN" secondAttribute="top" constant="48" id="Z9h-t8-0aG"/>
-                            <constraint firstItem="qoB-gA-mCN" firstAttribute="trailing" secondItem="frf-OD-Zxc" secondAttribute="trailing" constant="32" id="a3f-ku-X71"/>
-                            <constraint firstItem="4KF-dJ-8Tk" firstAttribute="top" secondItem="frf-OD-Zxc" secondAttribute="bottom" constant="91" id="aqz-oJ-IQh"/>
-                            <constraint firstItem="4KF-dJ-8Tk" firstAttribute="leading" secondItem="qoB-gA-mCN" secondAttribute="leading" constant="0.5" id="cFl-2Q-rcA"/>
-                            <constraint firstItem="qoB-gA-mCN" firstAttribute="bottom" secondItem="wSG-im-c9j" secondAttribute="bottom" constant="778" id="gGB-T9-RL3"/>
-                            <constraint firstItem="4KF-dJ-8Tk" firstAttribute="centerX" secondItem="wmb-l8-XjE" secondAttribute="centerX" id="iAv-u5-rTV"/>
-                            <constraint firstItem="qoB-gA-mCN" firstAttribute="trailing" secondItem="4KF-dJ-8Tk" secondAttribute="trailing" constant="0.5" id="qjh-Pe-8ua"/>
-                            <constraint firstItem="8cP-cd-tks" firstAttribute="top" secondItem="4KF-dJ-8Tk" secondAttribute="bottom" constant="55" id="uVa-xi-tYJ"/>
-                            <constraint firstItem="qoB-gA-mCN" firstAttribute="bottom" secondItem="8cP-cd-tks" secondAttribute="bottom" constant="20" id="xPa-vV-qRL"/>
-                            <constraint firstItem="frf-OD-Zxc" firstAttribute="leading" secondItem="qoB-gA-mCN" secondAttribute="leading" constant="32" id="xwK-xw-1fk"/>
-                            <constraint firstItem="qoB-gA-mCN" firstAttribute="trailing" secondItem="wSG-im-c9j" secondAttribute="trailing" constant="374" id="ysU-oF-qjk"/>
+                            <constraint firstItem="qoB-gA-mCN" firstAttribute="trailing" secondItem="wSG-im-c9j" secondAttribute="trailing" constant="374" id="0Fd-5L-bzT"/>
+                            <constraint firstItem="qoB-gA-mCN" firstAttribute="bottom" secondItem="wSG-im-c9j" secondAttribute="bottom" constant="778" id="1FU-Eh-GYF"/>
+                            <constraint firstItem="4KF-dJ-8Tk" firstAttribute="leading" secondItem="qoB-gA-mCN" secondAttribute="leading" constant="0.5" id="1X7-ov-Bq7"/>
+                            <constraint firstItem="qoB-gA-mCN" firstAttribute="trailing" secondItem="8cP-cd-tks" secondAttribute="trailing" constant="57" id="4zp-Ad-sOI"/>
+                            <constraint firstItem="wSG-im-c9j" firstAttribute="top" secondItem="qoB-gA-mCN" secondAttribute="top" constant="20" id="543-XE-RDY"/>
+                            <constraint firstItem="qoB-gA-mCN" firstAttribute="trailing" secondItem="frf-OD-Zxc" secondAttribute="trailing" constant="57" id="Bx7-pM-EvZ"/>
+                            <constraint firstItem="8cP-cd-tks" firstAttribute="leading" secondItem="qoB-gA-mCN" secondAttribute="leading" constant="57" id="H3J-O3-PAa"/>
+                            <constraint firstItem="8cP-cd-tks" firstAttribute="top" secondItem="frf-OD-Zxc" secondAttribute="bottom" constant="298" id="KzG-ga-Cf6"/>
+                            <constraint firstItem="qoB-gA-mCN" firstAttribute="trailing" secondItem="4KF-dJ-8Tk" secondAttribute="trailing" constant="0.5" id="R9q-vx-h71"/>
+                            <constraint firstItem="frf-OD-Zxc" firstAttribute="top" secondItem="qoB-gA-mCN" secondAttribute="top" constant="49" id="YZj-ZT-jjd"/>
+                            <constraint firstItem="frf-OD-Zxc" firstAttribute="leading" secondItem="qoB-gA-mCN" secondAttribute="leading" constant="57" id="d64-8w-pFf"/>
+                            <constraint firstItem="qoB-gA-mCN" firstAttribute="bottom" secondItem="8cP-cd-tks" secondAttribute="bottom" constant="20" id="fgS-Od-qAL"/>
+                            <constraint firstItem="8cP-cd-tks" firstAttribute="top" secondItem="4KF-dJ-8Tk" secondAttribute="bottom" constant="55" id="knY-ga-hNc"/>
+                            <constraint firstItem="wSG-im-c9j" firstAttribute="leading" secondItem="qoB-gA-mCN" secondAttribute="leading" constant="20" id="mBm-od-zP4"/>
                         </constraints>
                     </view>
                     <connections>
@@ -546,6 +543,9 @@
                                                             <real key="value" value="0.0"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <segue destination="iaY-g8-dUU" kind="show" id="xiI-q4-Zu8"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </collectionViewCellContentView>
@@ -629,10 +629,11 @@
                         <viewLayoutGuide key="safeArea" id="xa2-GN-9fG"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="HKd-og-5Xp"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nW6-0w-1X5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1104" y="-707"/>
+            <point key="canvasLocation" x="894" y="-707"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="dZa-iJ-NPX">

@@ -54,6 +54,7 @@ class SignUpViewController: UIViewController {
             
             let alert = UIAlertController(title: "알림", message: "회원가입 되었습니다", preferredStyle: .alert)
             alert.addAction(UIAlertAction(title: "확인", style: .default, handler: {_ in
+                self.initCategory()
                 self.navigationController?.popViewController(animated: true)
                 
             }))
@@ -65,10 +66,20 @@ class SignUpViewController: UIViewController {
         }
     }
     
+    // MARK: - 초기 데이터베이스 세팅
+    func initCategory() {
+        let mvc = MainViewController()
+        if let userID = Auth.auth().currentUser?.uid {
+            mvc.dbRef = mvc.db.collection("\(userID)").document("CategoryList")
+            mvc.dbRef?.setData(["Category1" : "일기"])
+            mvc.dbRef?.setData(["Category2" : "영화"])
+            mvc.dbRef?.setData(["Category3" : "음악"])
+        }
+    }
+    
     // MARK: - 디자인 세팅
     func designSet() {
         mainImageView.image = UIImage(named: "icon.png")
-        
         signUp.backgroundColor = UIColor(rgb: 0xF6E29A)
     }
     
